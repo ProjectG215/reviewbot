@@ -1,0 +1,66 @@
+/* Main Home Container */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100;400;500;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+.pro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100vw; /* Full width */
+    background-image: url("https://images.pexels.com/photos/6214383/pexels-photo-6214383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    padding: 10px;
+  }
+  
+  /* Right Text Section */
+  .content {
+    /* font-family: 'Playfair Display', serif; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .content h2 {
+    /* font-family: "Rajdhani", sans-serif; */
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight:600;
+    margin-bottom: 1rem;
+    color: black; /* Adjust color */
+  }
+  
+  .button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #ffffffa6;
+    color: rgb(0, 0, 0);
+    border:10;
+    border-color: black;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .button:hover {
+    background-color: #fadb2ff0;
+  }
+
+
+  @media (max-width: 768px) {
+    .pro-container{
+      width: 95vw;
+      height:100vh;
+    }
+    .content h2 {
+      font-size: 2.5rem;
+    }
+  
+    .button {
+      padding: 8px 20px;
+      font-size: 1rem;
+    }
+  }
+   

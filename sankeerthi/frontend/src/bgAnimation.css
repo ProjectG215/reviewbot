@@ -1,0 +1,61 @@
+/* bgAnimation.css */
+.bgAnimation {
+    position: fixed; /* Ensure the background stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: grid;
+    grid-template-columns: repeat(25, 1fr); /* Adjust based on your design */
+    grid-template-rows: repeat(30, 1fr); /* Adjust based on your design */
+    background: #1d1d1d; /* Base color */
+    z-index: 0; /* Keep behind the content */
+}
+
+
+/* Ensure the color boxes are properly styled */
+.colorBox {
+    filter: brightness(1.1);
+    transition: 0.5s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.colorBox:hover {
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+
+@keyframes animBack {
+    0% {
+        top: -60px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+/* Home.css */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 30%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    /* background-color: rgba(29, 29, 29, 0.8); */
+    background: transparent;
+    
+    /* Center the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

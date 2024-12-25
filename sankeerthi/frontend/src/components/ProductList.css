@@ -1,0 +1,67 @@
+/* Product Container */
+.bgImg {
+    background-image: url("/Pagebg.jpg");
+    background-repeat: repeat-y; /* Repeats the image vertically */
+    background-position: top center;
+    background-attachment: fixed; /* Fixes the background in place */
+    width: 100%;
+    position: relative;
+    min-height: 100vh; /* Ensures the background covers at least the full viewport height */
+}
+.product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Auto height */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* margin: 40px; Space between navbar and product list */
+    z-index: 2; /* Lower than navbar */
+    background-color: rgba(20, 157, 255, 0);
+    border-radius: 1rem;
+    position: relative; /* Change to relative */
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 16px; /* Space between items */
+    justify-items: center; /* Center items */
+    padding: 20px; /* Padding around grid */
+    color: black;
+    font-size:small;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+/* Product Card Styles */
+.cardStyle {
+    border: 2px solid rgba(0, 0, 0, 0.311); /* Change this color to your preferred border color */
+    border-radius: 10px; /* Adjust border radius for rounded corners */
+    padding: 15px; /* Space inside the card */
+    background-color: #ffffff; /* Background color for the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+/* Hover Effect for Cards */
+.cardStyle:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+

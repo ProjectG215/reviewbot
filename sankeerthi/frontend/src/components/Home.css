@@ -1,0 +1,149 @@
+/* Main Home Container */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100;400;500;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+.home-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Left Image Section */
+  .image-section {
+    width: 50%; /* Left half for the image */
+    background-image: url('https://res.cloudinary.com/duwadnxwf/image/upload/v1729736625/axBot_xfoz0m.webp'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Right Text Section */
+  .text-section {
+    /* font-family: 'Playfair Display', serif; */
+    width: 50%; /* Right half for the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    color: white;
+  }
+  
+  .text-section h1 {
+    /* font-family: "Rajdhani", sans-serif; */
+    font-size: 4rem;
+    font-weight:600;
+    margin-bottom: 1rem;
+    color: black; /* Adjust color */
+  }
+  
+  .text-section p {
+    /* font-family: "Rajdhani", sans-serif; */
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: black; /* Adjust color */
+  }
+  
+  .discover-btn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #ffffffa6;
+    color: rgb(0, 0, 0);
+    border:10;
+    border-color: black;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discover-btn:hover {
+    background-color: #fadb2ff0;
+  }
+  .second-home{
+    display: flex;
+    width: 100%;
+    background:black;
+    /* background-repeat:repeat-x; */
+    /* background-size: cover; */
+  }
+  .second-home .text-section h1 {
+    font-size: 4rem;
+    font-weight:500;
+    margin-bottom: 1rem;
+    color: white; /* Adjust color */
+  }
+  .second-home .btn-section{
+    /* font-family: "Rajdhani", sans-serif; */
+    padding: 5rem;
+    margin-left: 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white; /* Adjust color */
+    font-size: 30px;
+  }
+
+  .btn-section .discover-btn{
+    background-color:white;
+    color: black;
+  }
+  .btn-section .discover-btn:hover{
+    background-color: #fadb2ff0;
+    /* color: white; */
+  }
+  
+  .card-sec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .text-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .text-section p {
+      font-size: 1rem;
+    }
+  
+    .discover-btn {
+      padding: 8px 20px;
+      font-size: 1rem;
+    }
+    .feature-cards {
+      flex-direction: column;
+    }
+  
+    .feature-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+   

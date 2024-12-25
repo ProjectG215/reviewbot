@@ -1,0 +1,132 @@
+/* General Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup Container */
+  .popup-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Stages Layout */
+  .stages-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Each Stage Wrapper */
+  .stage-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  /* Stage Base Styles */
+  .stage {
+    text-align: center;
+  }
+  
+  .stage-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #bbb;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .stage-name {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #bbb;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  /* Active Stage */
+  .stage.active .stage-icon {
+    color: #4caf50; /* Green color for active stage */
+    transform: scale(1.2);
+  }
+  
+  .stage.active .stage-name {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Completed Stage */
+  .stage.completed .stage-icon {
+    color: #4caf50; /* Green color for completed stages */
+  }
+  
+  .stage.completed .stage-name {
+    color: #4caf50;
+  }
+  
+  /* Line Between Stages */
+  .stage-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    background: #ddd;
+    flex: 1;
+    transition: background 0.3s ease, width 0.3s ease;
+  }
+  
+  .stage-line.completed {
+    background: #4caf50; /* Green color for completed stages */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .stages-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .stage-wrapper {
+      flex-direction: column;
+    }
+  
+    .stage-line {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .stage-icon {
+      font-size: 2rem;
+    }
+  
+    .stage-name {
+      font-size: 0.9rem;
+    }
+  }
+  

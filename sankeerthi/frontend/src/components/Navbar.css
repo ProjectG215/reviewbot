@@ -1,0 +1,78 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px); /* Subtract 40px to account for padding */
+    margin:15px;
+    padding: 15px 5%; /* Add padding for spacing instead of margin */
+    background-color: rgba(0, 0, 0, 0.571);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none; /* Hide on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    transition: max-height 0.3s ease;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+/* Active class to show menu */
+.navbar.active {
+    display: block; /* Show the menu */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide links by default on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Match the navbar background */
+        position: absolute; /* Position it below the header */
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex; /* Show links when menu is open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on smaller screens */
+    }
+}

@@ -1,0 +1,20 @@
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000; /* Ensure the popup stays on top */
+    color: #fff;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .popup.success {
+    background-color: #4CAF50; /* Green for success */
+  }
+  
+  .popup.error {
+    background-color: #f44336; /* Red for error */
+  }
+  
