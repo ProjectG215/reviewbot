@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set background color to Tailwind's gray-100 using hex code */
+body {
+    background-color: #f7fafc; /* Tailwind gray-100 */
+}
