@@ -110,7 +110,7 @@ const ProductDescription = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 p-6 pt-20">
       {/* Product Details Section */}
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')// import validator from 'validator';
 
-const registerSchema = new mongoose.Schema({
+const RegisterSchema = new mongoose.Schema({
     email:{
         type: String,
         required: true,
@@ -32,7 +32,7 @@ const registerSchema = new mongoose.Schema({
     timestamps: true // createdAt, updatedAt
 });
 
-const RegisterModel = mongoose.model("users",RegisterSchema)
+const RegisterModel = mongoose.model("users",RegisterSchema);
 
 // History Schema
 const HistorySchema = new mongoose.Schema({
@@ -106,7 +106,7 @@ const Chat = mongoose.model('Chat', ChatSchema);
 const ChatHistory = mongoose.model('ChatHistory', ChatHistorySchema);
 
 module.exports = {
-    RegisterModel,
+    User:RegisterModel,
     History,
     Product,
     Chat,

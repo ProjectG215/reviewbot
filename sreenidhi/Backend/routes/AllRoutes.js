@@ -3,10 +3,18 @@ const axios = require("axios"); // To make HTTP requests
 // const User = require("../schema/schema.js");
 const {User} = require("../schema/schema.js");
 const { HfInference } = require("@huggingface/inference");
+
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 require('dotenv').config();
+
 const client = new HfInference("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");
 
 const router = express.Router();
+router.use(cors());
+router.use(express.json());
+router.use(bodyParser.urlencoded({ extended: true }));
 
 //-------------------------------------------------------------------------
 // Scrape JS route for Flask Route
@@ -78,16 +86,35 @@ router.post('/linkInput', async (req, res,next) => {
 // Chatbot
 
 router.post('/chatBot',async(req,res)=>{
+  console.log('POST /chat called with data:');
   const {question} = req.body;
+
+  if (!question) {
+    return res.status(400).json({ error: 'Data or query not provided' });
+  }
+
   try{
-      const response = await axios.post("http://localhost:5000/query",{question});
-      console.log(response?.data);
-      res.status(200).json(response.data);
-  }
+      const flaskResponse = await axios.post("http://localhost:5000/query",
+        { 
+          question:question,
+        }, 
+
+        {
+          headers: 
+          {
+              'Content-Type': 'application/json', 
+          },
+        }
+  );
+      console.log('Response from Flask:');
+      console.log(flaskResponse.data);
+      res.status(flaskResponse.status).json(flaskResponse.data);
+    }
   catch(error){
-      console.log(error);
+    console.error('Error communicating with Flask server:', error.message);
+    res.status(500).json({ error: 'Internal server error' });
   }
-})
+});
 
 //-------------------------------------------------------------------------
 // Text Summarization
